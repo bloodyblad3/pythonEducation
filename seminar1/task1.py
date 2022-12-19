@@ -11,11 +11,14 @@ def input_number(text: str) -> int:
         print("это не число!")
     return number
 
-num = input_number("Введите число: ")
 
-if num >= 1 and num <= 5:
-    print("нет")
-elif num < 1 or num > 7:
-    print(". _. в неделе ток 7 дней :)")
-else:
-    print("да")
+def check_weekend(num: int):
+    if num == 6 or num == 7:
+        print("да")
+    elif num > 0 and num < 6:
+        print("да")
+    else:
+        print(". _. в неделе ток 7 дней :)")
+
+num = input_number("Введите число: ")
+check_weekend(num)
