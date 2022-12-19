@@ -11,7 +11,7 @@ def input_numbers(x):
             number = int(input(f"Введите координату по {xy[i]}: "))
             a.append(number)
         except ValueError:
-            print("Ты ошибся. Вводить надо целые числа!")
+            print("введи целые числа!")
     return a
 
 
