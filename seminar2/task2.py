@@ -6,7 +6,7 @@
 
 def input_number(text: str) -> int:
     try:
-        number = float(input(text))
+        number = int(input(text))
     except ValueError:
         print("это не число!")
     return number
@@ -23,5 +23,4 @@ num = input_number("Введите число: ")
 list = []
 for i in range(1, num + 1):
     list.append(mult(i))
-
-print(f"Произведения чисел от 1 до {num}:  {list}")
+print(f"Произведения чисел от 1 до {num}: {list}")
