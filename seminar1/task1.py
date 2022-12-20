@@ -16,7 +16,7 @@ def check_weekend(num: int):
     if num == 6 or num == 7:
         print("да")
     elif num > 0 and num < 6:
-        print("да")
+        print("нет")
     else:
         print(". _. в неделе ток 7 дней :)")
 
