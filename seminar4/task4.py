@@ -42,5 +42,5 @@ def create_str(polynomial):
     return write
 
 power = input_number("Введите натуральную степень k = ")
-ratio = create_polynomial(power)
-write_file(create_str(ratio))
+polynomial = create_polynomial(power)
+write_file(create_str(polynomial))
