@@ -20,8 +20,8 @@ def create_polynomial(ratio):
     list = [random.randint(0, 101) for i in range(ratio+1)]
     return list
 
-def create_str(power):
-    list = power[::-1]
+def create_str(polynomial):
+    list = polynomial[::-1]
     write = ''
     if len(list) < 1:
         write = "x = 0"
