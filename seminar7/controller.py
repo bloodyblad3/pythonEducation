@@ -17,19 +17,18 @@ def input_separator():
     return sep
 
 def choice():
-    choice = input('''Введите опцию > 
+    choice = int(input('''Введите опцию > 
                    1 - импорт информации
                    2 - вывод информации в справочнике
-                   3 - выход''')
-    while True:
-        if choice < 1 or choice > 3:
-            print("Введите верную опцию.")
-        elif choice == 1:
-            sep = input_separator()
-            insert_data(input_data, sep)
-        elif choice == 2:
-            data = export_data()
-            print_data(data)
-        else:
-            print("Выход из справочника...")
-            break
+                   3 - выход\n'''))
+    if choice < 1 or choice > 3:
+        print("Введите верную опцию.")
+    elif choice == 1:
+        sep = input_separator()
+        insert_data(input_data(), sep)
+    elif choice == 2:
+        data = export_data()
+        print_data(data)
+    else:
+        print("Выход из справочника...")
+        os.abort()
