@@ -1,5 +1,5 @@
 def export_data():
-    with open("notes.txt", 'r') as file:
+    with open("note.txt", 'r') as file:
         data = []
         t = []
         for line in file:
