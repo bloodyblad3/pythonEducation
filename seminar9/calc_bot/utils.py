@@ -28,4 +28,5 @@ def calc(my_list):
 def logwrite(note, message_text):
     operation_time = datetime.now().strftime('%H:%M')
     with open('log_file.txt', 'a') as data:
-        data.write(operation_time + ' ' + note + str(message_text) + '\n')
+        data.write(f"{operation_time} {note}{str(message_text)}")
+        data.write("\n")
