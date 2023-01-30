@@ -1,8 +1,9 @@
 from aiogram import Dispatcher, types
-from utils import calc
+from utils import calc, logwrite
 
 async def calculate(message: types.Message):
     parsed_message = message.text
+    logwrite("User input: ", parsed_message)
     temp_list = parsed_message.replace('+', ' + ')\
     .replace('-', ' - ')\
     .replace('*', ' * ')\
@@ -18,6 +19,7 @@ async def calculate(message: types.Message):
             temp_list = temp_list[:first_i] + calc(temp_list[first_i + 1:second_i]) + temp_list[second_i+1:]
 
     answer = calc(temp_list)
+    logwrite("Solution: ", {answer[0]})
     await message.answer(f"{parsed_message}={answer[0]}")
 
 def register_handlers(dp: Dispatcher):
