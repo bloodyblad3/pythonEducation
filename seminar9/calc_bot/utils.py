@@ -1,3 +1,5 @@
+from datetime import datetime
+
 def calc(my_list):
     while '*' in my_list or '/' in my_list:
         for i in range(1, len(my_list), 2):
@@ -22,3 +24,8 @@ def calc(my_list):
                 break
     
     return my_list
+
+def logwrite(note, message_text):
+    operation_time = datetime.now().strftime('%H:%M')
+    with open('log_file.txt', 'a') as data:
+        data.write(operation_time + ' ' + note + str(message_text) + '\n')
